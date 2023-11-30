@@ -14,7 +14,7 @@ app.use(express.json());  //middleware
 //Method 2
 app.use(
     cors({
-        origin: "",
+        origin: ["https://book-store-mern-ufeq.vercel.app"],
         methods: ["GET", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content-Type"],
         credentials: true,
