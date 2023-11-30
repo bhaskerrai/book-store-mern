@@ -12,10 +12,12 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [showType, setShowType] = useState("table");
 
+  axios.defaults.withCredentials = true;
+
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5555/books")
+      .get("https://book-store-mern-one.vercel.app/books")
       .then((respone) => {
         setBooks(respone.data.data);
         setLoading(false);

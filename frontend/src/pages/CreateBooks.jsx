@@ -14,6 +14,9 @@ const CreateBooks = () => {
   const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar()
 
+  axios.defaults.withCredentials = true;
+
+
   const handleSaveBook = () => {
 
     const data = {
@@ -25,7 +28,7 @@ const CreateBooks = () => {
     setLoading(true)
 
     axios
-      .post("http://localhost:5555/books", data)
+      .post("https://book-store-mern-one.vercel.app/books", data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book created successfully!", {variant: "success"})
