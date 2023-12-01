@@ -28,7 +28,7 @@ const CreateBooks = () => {
     setLoading(true)
 
     axios
-      .post("https://book-store-mern-one.vercel.app/books", data)
+      .post("https://puzzled-pink-hare.cyclic.app/books", data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book created successfully!", {variant: "success"})

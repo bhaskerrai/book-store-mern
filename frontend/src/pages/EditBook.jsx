@@ -22,7 +22,7 @@ const EditBook = () => {
 
     setLoading(true);
     axios
-      .get(`https://book-store-mern-one.vercel.app/books/${id}`)
+      .get(`https://puzzled-pink-hare.cyclic.app/books/${id}`)
       .then((respone) => {
         setTitle(respone.data.title)
         setAuthor(respone.data.author)
@@ -49,7 +49,7 @@ const EditBook = () => {
     setLoading(true);
 
     axios
-      .put(`https://book-store-mern-one.vercel.app/books/${id}`, data)
+      .put(`https://puzzled-pink-hare.cyclic.app/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book edited successfully!", {variant: "success"})

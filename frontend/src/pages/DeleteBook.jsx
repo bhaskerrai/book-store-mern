@@ -19,7 +19,7 @@ const DeleteBook = () => {
     setLoading(true)
 
     axios
-      .delete(`https://book-store-mern-one.vercel.app/books/${id}`)
+      .delete(`https://puzzled-pink-hare.cyclic.app/books/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book deleted successfully!", {variant: "success"})
