@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://book-store-mern-ecru.vercel.app/books")
+      .get("https://puzzled-pink-hare.cyclic.app/books")
       .then((respone) => {
         setBooks(respone.data.data);
         setLoading(false);
