@@ -4,23 +4,22 @@ import mongoose from 'mongoose';
 import { Book } from './models/bookModel.js';
 import booksRoute from './routes/booksRoute.js';
 import cors from 'cors';
-
 const app = express();
 
 app.use(express.json());  //middleware
 
 //Method 1 for cors
-app.use(cors()); //allows all domains
+// app.use(cors()); //allows all domains
 
 //Method 2
-// app.use(
-//     cors({
-//         origin: [""],
-//         methods: ["GET", "POST", "PUT", "DELETE"],
-//         allowedHeaders: ["Content-Type"],
-//         credentials: true,
-//     })
-// )
+app.use(
+    cors({
+        origin: ["https://book-store-mern-ufeq.vercel.app"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        allowedHeaders: ["Content-Type"],
+        credentials: true,
+    })
+)
 
 app.get('/', (request, respone) => {
     console.log(request)
@@ -42,5 +41,3 @@ mongoose
     .catch((error) => {
         console.log(error)
     })
-
-export default app
